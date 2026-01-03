@@ -1,0 +1,93 @@
+/* ===============================
+   APP BASE
+================================ */
+.App {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #F5F5F5;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ===============================
+   SECTION LAYOUT
+================================ */
+section {
+  padding: 80px 40px;
+  max-width: 1400px;
+  margin: 0 auto;
+  scroll-margin-top: 120px;
+}
+
+@media (max-width: 768px) {
+  section {
+    padding: 60px 20px;
+  } 
+}
+
+/* ===============================
+   REVEAL SYSTEM (OPTIONAL / OLD)
+   Use only if needed
+================================ */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition:
+    opacity 0.9s ease,
+    transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Header special reveal (top → down) */
+.reveal-header {
+  opacity: 0;
+  transform: translateY(-40px);
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal-header.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===============================
+   GLOBAL ENTER ANIMATION (FIXED)
+   ✅ USE THIS FOR animate-enter
+================================ */
+
+/* Initial hidden state */
+.animate-enter {
+  opacity: 0;
+  transform: translateY(40px);
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.animate-enter.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Child stagger animation */
+.animate-child {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.animate-child.visible {
+  opacity: 1;
+  transform: translateY(0);
+}

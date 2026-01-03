@@ -1,0 +1,180 @@
+/* ===============================
+   BASE
+================================ */
+.project-details {
+  max-width: 1400px;
+  margin: auto;
+  padding: 40px 20px 80px;
+}
+
+/* ===============================
+   PAGE ENTER
+================================ */
+.page-enter-up {
+  animation: pageEnterUp 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@keyframes pageEnterUp {
+  from {
+    opacity: 0;
+    transform: translateY(80px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===============================
+   BACK BUTTON
+================================ */
+.back-home-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 40px;
+  padding: 0;
+  opacity: 0;
+  animation: backBtnEnter 0.6s ease forwards;
+}
+
+@keyframes backBtnEnter {
+  to {
+    opacity: 1;
+  }
+}
+
+.back-icon {
+  width: 44px;
+  height: 44px;
+  background: #fff;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.back-icon svg {
+  font-size: 18px;
+  color: #111;
+}
+
+.back-text {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #111;
+}
+
+.back-home-btn:hover .back-icon {
+  transform: translateX(-4px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* ===============================
+   HEADER
+================================ */
+.project-title {
+  font-size: 64px;
+  font-weight: 900;
+  margin-bottom: 10px;
+}
+
+.project-desc {
+  font-size: 18px;
+  color: #666;
+  max-width: 600px;
+}
+
+/* ===============================
+   META
+================================ */
+.project-meta {
+  margin: 50px 0;
+  padding: 20px;
+  background: #f3f3f3;
+  border-radius: 20px;
+}
+
+.project-meta div {
+  background: #fff;
+  padding: 22px;
+  border-radius: 14px;
+}
+.slash{
+  color: rgb(247, 183, 22);
+}
+.text {
+  font-size: 12px;
+  letter-spacing: 1px;
+  
+  color: #444;
+
+}
+
+.project-meta h4 {
+  margin-top: 6px;
+  font-size: 18px;
+}
+
+/* ===============================
+   HERO + INFO
+================================ */
+.project-hero-image {
+  display: flex;
+  gap: 60px;
+  align-items: flex-start;
+}
+
+.project-hero-image img {
+  width: 45%;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+/* ===============================
+   PROJECT INFO
+================================ */
+.project-info {
+  flex: 1;
+}
+
+.info-block #txt {
+  font-size: 20px;
+  letter-spacing: 1px;
+  color: rgb(1, 2, 5);
+  font-weight: 600;
+  margin-bottom: 16px;
+  display: inline-block;
+}
+
+.info-block p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #444;
+  margin-bottom: 16px;
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+@media (max-width: 1024px) {
+  .project-hero-image {
+    flex-direction: column;
+  }
+
+  .project-hero-image img {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .project-title {
+    font-size: 42px;
+  }
+}

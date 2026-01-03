@@ -1,0 +1,64 @@
+/* ===============================
+   CURSOR DOT
+================================ */
+
+.cursor-dot {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 12px;               /* Increased size */
+  height: 12px;
+  background: #fff;          /* Base color */
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  mix-blend-mode: difference; /* 🔥 AUTO INVERT */
+  transition:
+    opacity 0.25s ease,
+    transform 0.15s ease;
+}
+
+/* ===============================
+   CURSOR RING
+================================ */
+
+.cursor-ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 42px;
+  height: 42px;
+  border: 1.5px solid #fff;  /* Base color */
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9998;
+  transform: translate(-50%, -50%);
+  mix-blend-mode: difference; /* 🔥 AUTO INVERT */
+  transition:
+    opacity 0.3s ease,
+    transform 0.25s ease;
+}
+
+/* ===============================
+   IDLE STATE
+================================ */
+
+.cursor-ring.idle {
+  transform: translate(-50%, -50%) scale(1.35);
+  opacity: 0.35;
+}
+
+.cursor-dot.idle {
+  transform: translate(-50%, -50%) scale(0.6);
+  opacity: 0.6;
+}
+
+/* ===============================
+   HIDDEN
+================================ */
+
+.cursor-dot.hidden,
+.cursor-ring.hidden {
+  opacity: 0;
+}

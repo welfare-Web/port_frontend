@@ -1,0 +1,354 @@
+.footer {
+  background-color: #1a1a1a;
+  color: white;
+  padding: 80px 40px 40px;
+}
+
+.footer-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.footer-content {
+ display: flex;
+  gap: 60px;
+  margin-bottom: 60px;
+}
+
+/* ===============================
+   SECTIONS
+================================ */
+
+.footer-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.footer-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: white;
+}
+
+.footer-description {
+  font-size: 16px;
+  color: #999;
+  line-height: 1.6;
+}
+
+/* ===============================
+   NEWSLETTER
+================================ */
+
+.newsletter-form {
+  display: flex;
+  gap: 10px;
+}
+
+.newsletter-input {
+  flex: 1;
+  background-color: #2a2a2a;
+  border: none;
+  padding: 16px;
+  border-radius: 8px;
+  color: white;
+}
+
+.newsletter-input::placeholder {
+  color: #666;
+}
+
+.newsletter-input:focus {
+  outline: none;
+  background-color: #333;
+}
+
+.newsletter-button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgb(31,94,255);
+  color: white;
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.newsletter-button:hover {
+  transform: scale(1.1);
+}
+
+/* ===============================
+   LINKS
+================================ */
+
+.footer-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #999;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.footer-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.footer-links a {
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+}
+
+.footer-links a:hover {
+  color: rgb(31,94,255);
+}
+
+/* ===============================
+   FOOTER BOTTOM
+================================ */
+
+.footer-bottom {
+  border-top: 1px solid #333;
+  padding-top: 40px;
+}
+
+.footer-copyright {
+  font-size: 14px;
+  color: #999;
+}
+
+/* ===============================
+   🔥 FIXED BUTTONS (REQUESTED)
+================================ */
+
+.footer-buttons {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Primary */
+.footer-template-btn {
+  background-color: rgb(31,94,255);
+  color: #000;
+  padding: 14px 22px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-left: 3rem;
+  transition: all 0.25s ease;
+}
+
+.footer-template-btn:hover {
+  background-color: rgb(31,94,255);
+  transform: translateY(-2px);
+}
+
+/* Secondary */
+.footer-framer-btn {
+  background-color: #111;
+  color: #fff;
+  padding: 14px 20px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.footer-framer-btn:hover {
+  background-color: #000;
+  transform: translateY(-2px);
+}
+.footer-buttons { 
+  align-items: flex-start; 
+}
+
+
+
+.footer-link-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+}
+
+.footer-link-btn:hover {
+  color: rgb(31,94,255);
+}
+.newsletter-button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgb(31,94,255);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Arrow icon */
+.newsletter-arrow {
+  font-size: 20px;
+  color: #111;
+  transition: transform 0.3s ease;
+}
+
+/* Hover animation */
+.newsletter-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 10px 25px rgba(255, 107, 53, 0.35);
+}
+
+.newsletter-button:hover .newsletter-arrow {
+  transform: translateX(4px);
+}
+/* ===============================
+   RESPONSIVE
+================================ */
+
+/* ===============================
+   MOBILE RESPONSIVE FIX
+================================ */
+
+@media (max-width: 768px) {
+
+  .footer {
+    padding: 60px 20px 30px;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    gap: 40px;
+    margin-bottom: 40px;
+  }
+
+  .footer-section {
+    gap: 16px;
+  }
+
+  .footer-title {
+    font-size: 20px;
+  }
+
+  .footer-description {
+    font-size: 14px;
+  }
+
+  /* Newsletter */
+  .newsletter-form {
+    flex-direction: row;
+  }
+
+  .newsletter-input {
+    padding: 14px;
+    font-size: 14px;
+  }
+
+  .newsletter-button {
+    width: 46px;
+    height: 46px;
+  }
+
+  .newsletter-arrow {
+    font-size: 18px;
+  }
+
+  /* Links */
+  .footer-links a,
+  .footer-link-btn {
+    font-size: 14px;
+  }
+
+  /* Footer Bottom */
+  .footer-bottom {
+    padding-top: 30px;
+    text-align: center;
+  }
+
+  .footer-copyright {
+    font-size: 12px;
+  }
+
+  /* Fixed Buttons */
+  .footer-buttons {
+    right: 14px;
+    bottom: 14px;
+    gap: 10px;
+  }
+
+  .footer-template-btn,
+  .footer-framer-btn {
+    padding: 12px 18px;
+    font-size: 12px;
+  }
+  .footer-buttons {
+    right: 16px;
+    bottom: 16px;
+    flex-direction: column;
+  }
+    /* Order control */
+  .footer-section.newsletter {
+    order: 1;
+  }
+
+  .footer-section.navigation {
+    order: 2;
+  }
+
+  .footer-section.social {
+    order: 3;
+    margin-top: 20px; /* 👈 SOCIAL GOES BELOW FAQs */
+  }
+}
+
+/* ===============================
+   SMALL MOBILE (VERY SMALL DEVICES)
+================================ */
+
+@media (max-width: 480px) {
+
+  .footer-title {
+    font-size: 18px;
+  }
+
+  .footer-description {
+    font-size: 13px;
+  }
+
+  .newsletter-form {
+    flex-direction: column;
+  }
+
+  .newsletter-button {
+    width: 100%;
+    height: 44px;
+    border-radius: 8px;
+  }
+
+  .newsletter-arrow {
+    transform: none;
+  }
+
+  .footer-buttons {
+    right: 10px;
+    bottom: 10px;
+  }
+}

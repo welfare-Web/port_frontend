@@ -1,0 +1,223 @@
+.about {
+  padding: 120px 40px;
+  background-color: #F5F5F5;
+}
+
+.about-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* ================= HEADER ================= */
+
+.section-header {
+  max-width: 820px;
+  margin-bottom: 80px;
+}
+
+.section-tag {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: #1f5eff;
+  margin-bottom: 12px;
+}
+
+.section-title {
+  font-size: 48px;
+  font-weight: 800;
+  margin-bottom: 18px;
+  color: #111;
+}
+
+.section-description {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #555;
+}
+
+/* ================= GRID ================= */
+
+.roles-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 50px;
+}
+
+/* ================= CARD ================= */
+
+.role-card {
+  background: #ffffff;
+  padding: 36px 26px;
+  border-radius: 22px;
+  text-align: center;
+  transition: transform 0.45s ease, box-shadow 0.45s ease;
+}
+
+.role-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.08);
+}
+
+/* ================= CIRCLE ================= */
+
+.role-circle {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 26px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #1f5eff, #2563eb);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 18px 45px rgba(31, 94, 255, 0.35);
+  transition: transform 0.5s ease;
+  overflow: hidden; /* 🔥 IMPORTANT */
+}
+
+/* PROFILE IMAGE FIX */
+.role-circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;   /* fills the circle perfectly */
+  border-radius: 50%;  /* ensures round clipping */
+  display: block;
+}
+
+
+
+/* ================= TEXT ================= */
+
+.role-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #111;
+}
+
+.role-desc {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #666;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1200px) {
+  .roles-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .roles-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .section-title {
+    font-size: 38px;
+  }
+}
+
+@media (max-width: 600px) {
+  .about {
+    padding: 80px 20px;
+  }
+
+  .roles-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-title {
+    font-size: 32px;
+  }
+}
+/* ================= IMAGE PREMIUM HOVER ================= */
+
+.role-circle {
+  position: relative;
+}
+
+.role-circle::after {
+  content: "";
+  position: absolute;
+  inset: -6px;
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+.role-card:hover .role-circle::after {
+  opacity: 1;
+}
+
+/* Image motion */
+.role-circle img {
+  transition:
+    transform 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+    filter 0.6s ease;
+}
+
+.role-card:hover .role-circle img {
+  transform: scale(1.12) rotate(2deg);
+  filter: brightness(1.05) contrast(1.05);
+}
+
+/* ================= MISSION & VISION ================= */
+
+.mv-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 60px;
+  margin-bottom: 100px;
+}
+
+.mv-card {
+  background: #ffffff;
+  padding: 50px 40px;
+  border-radius: 26px;
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.06);
+  transition: transform 0.45s ease, box-shadow 0.45s ease;
+}
+
+.mv-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 40px 90px rgba(0, 0, 0, 0.215);
+}
+
+.mv-icon {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #1f5eff, #2563eb);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+  box-shadow: 0 18px 45px rgba(31, 94, 255, 0.35);
+}
+
+.mv-icon svg {
+  font-size: 40px;
+  color: #ffffff;
+}
+
+.mv-card h3 {
+  font-size: 26px;
+  font-weight: 800;
+  margin-bottom: 14px;
+  color: #111;
+}
+
+.mv-card p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #555;
+}
+
+@media (max-width: 900px) {
+  .mv-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}

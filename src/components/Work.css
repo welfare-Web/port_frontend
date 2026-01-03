@@ -1,0 +1,229 @@
+.work {
+  padding: 100px 40px;
+}
+
+.work-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* ===============================
+   HEADER
+================================ */
+.section-tag {
+  font-size: 13px;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.section-title {
+  font-size: 48px;
+  font-weight: 900;
+}
+
+.section-description {
+  max-width: 500px;
+  color: #666;
+}
+
+/* ===============================
+   GRID
+================================ */
+.work-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 60px;
+}
+
+/* ===============================
+   CARD
+================================ */
+.work-card {
+  position: relative;
+  border-radius: 18px;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+}
+
+/* ===============================
+   IMAGE
+================================ */
+.work-image {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.work-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.work-card:hover img {
+  transform: scale(1.12);
+}
+
+/* ===============================
+   DARK OVERLAY
+================================ */
+.work-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.85),
+    rgba(0, 0, 0, 0.35),
+    transparent
+  );
+  display: flex;
+  align-items: flex-end;
+  padding: 28px;
+  opacity: 0;
+  transition: opacity 0.45s ease;
+  z-index: 2;
+}
+
+.work-card:hover .work-overlay {
+  opacity: 1;
+}
+
+/* ===============================
+   OVERLAY BUTTON
+================================ */
+/* .work-button {
+  all: unset;
+  cursor: pointer;
+}
+
+.work-overlay-content {
+  transform: translateY(24px);
+  justify-content: start;
+  opacity: 0;
+  transition: all 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.work-card:hover .work-overlay-content {
+  transform: translateY(0);
+  opacity: 1;
+} */
+
+.work-title {
+  color: #fff;
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.work-category {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 13px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* ===============================
+   FOOTER BUTTON (HOVER ONLY)
+================================ */
+.work-card-footer {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  right: 16px;
+  z-index: 5;
+   display: flex;
+  align-items: center;
+  justify-content: space-between; /* ✅ EVEN SPACING */
+  padding: 20px 24px;
+
+  /* hidden by default */
+  opacity: 0;
+  transform: translateY(12px);
+  pointer-events: none;
+
+  transition: all 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* show on hover */
+.work-card:hover .work-card-footer {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.work-footer-button {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.96);
+  border-radius: 18px;
+  padding: 16px 18px;
+  display: flex;
+  
+  justify-content: space-between;
+  border: none;
+  cursor: pointer;
+  backdrop-filter: blur(12px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.work-footer-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* footer text */
+ .work-footer-text{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* ✅ LEFT ALIGN */
+  text-align: left;        /* ✅ TEXT STARTS LEFT */
+  gap: 4px;
+  
+}
+.work-footer-text h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+  
+}
+
+.work-footer-text p {
+   margin: 0;
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+/* footer icon */
+.work-footer-icon {
+  width: 44px;
+  height: 44px;
+  background: #111;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  
+  flex-shrink: 0;
+  transition: transform 0.25s ease;
+}
+
+.work-footer-button:hover .work-footer-icon {
+  transform: rotate(-45deg);
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+@media (max-width: 1024px) {
+  .work-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .work-grid {
+    grid-template-columns: 1fr;
+  }
+}
