@@ -24,41 +24,6 @@ const Contact = () => {
   const [showPopup, setShowPopup] = useState(false);
 
 
-  // const handleSubmit = async (e) => {
-  //   e.preventDefault();
-
-  //   try {
-  //     const res = await fetch("http://127.0.0.1:8000/api/contact/", {
-  //       method: "POST",
-  //       headers: {
-  //         "Content-Type": "application/json",
-  //       },
-  //       body: JSON.stringify(formData),
-  //     });
-
-  //     const data = await res.json();
-
-  //     if (data.status === "success") {
-  //   setShowPopup(true);
-
-  //   setFormData({
-  //     name: "",
-  //     email: "",
-  //     phone: "",
-  //     message: "",
-  //   });
-
-  //   // Auto hide popup after 3 seconds
-  //   setTimeout(() => {
-  //     setShowPopup(false);
-  //   }, 3000);
-  // }
-
-  //   } catch (error) {
-  //     console.error(error);
-  //     alert("Something went wrong. Try again.");
-  //   }
-  // };
 const handleSubmit = async (e) => {
   e.preventDefault();
 
@@ -216,3 +181,4 @@ const handleSubmit = async (e) => {
 };
 
 export default Contact;
+
