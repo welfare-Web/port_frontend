@@ -4,7 +4,7 @@ import './Contact.css';
 import { FiPaperclip } from "react-icons/fi";
 import { LuPhoneCall } from "react-icons/lu";
 import { FiCheckCircle } from "react-icons/fi";
-
+import api from "../api/axios"; // adjust path if needed
 
 
 const Contact = () => {
@@ -24,42 +24,41 @@ const Contact = () => {
   const [showPopup, setShowPopup] = useState(false);
 
 
+
+
 const handleSubmit = async (e) => {
   e.preventDefault();
 
-  const API_URL = import.meta.env.VITE_API_URL;
-  if (!API_URL) {
-    alert("API URL not configured");
-    return;
-  }
-
   try {
-    const res = await fetch(`${API_URL}/api/contact/`, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(formData),
-    });
+    const response = await api.post("/api/contact/", formData);
 
-    let data;
-    try {
-      data = await res.json();
-    } catch {
-      throw new Error("Invalid JSON response from server");
-    }
-
-    if (data.status === "success") {
+    if (response.data.status === "success") {
       setShowPopup(true);
-      setFormData({ name: "", email: "", phone: "", message: "" });
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        message: "",
+      });
+
       setTimeout(() => setShowPopup(false), 3000);
     } else {
-      alert(data.message || "Submission failed");
+      alert(response.data.message || "Submission failed");
     }
   } catch (error) {
-    console.error("Submit error:", error);
-    alert("Server error. Please try again later.",error);
+    console.error("Axios submit error:", error);
+
+    if (error.response) {
+      // Backend responded with error
+      alert(error.response.data?.message || "Server error");
+    } else if (error.request) {
+      // No response (network/CORS)
+      alert("Network error. Backend not reachable.");
+    } else {
+      alert("Unexpected error occurred.");
+    }
   }
 };
-
 
 
   return (
@@ -181,5 +180,6 @@ const handleSubmit = async (e) => {
 };
 
 export default Contact;
+
 
 
