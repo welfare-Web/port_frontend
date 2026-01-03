@@ -56,7 +56,7 @@ const handleSubmit = async (e) => {
     }
   } catch (error) {
     console.error("Submit error:", error);
-    alert("Server error. Please try again later.");
+    alert("Server error. Please try again later.",error);
   }
 };
 
@@ -181,4 +181,5 @@ const handleSubmit = async (e) => {
 };
 
 export default Contact;
+
 
