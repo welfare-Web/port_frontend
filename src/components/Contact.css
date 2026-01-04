@@ -127,30 +127,44 @@
 
 @media (max-width: 768px) {
 
-  .contact {
-    padding: 50px 16px;
-    display: flex;
-    justify-content: center;   /* 🔥 center horizontally */
+  body {
+    overflow-x: hidden; /* 🔥 stop horizontal scroll */
   }
 
-  /* Main wrapper (cards + form) */
+  .contact {
+    padding: 40px 16px;
+  }
+
   .contact-container {
     width: 100%;
-    max-width: 420px;          /* 🔥 keeps it centered */
+    max-width: 420px;
     margin: 0 auto;
   }
 
-  /* Contact cards (email / call) */
+  .contact-content {
+    display: flex;              /* 🔥 kill grid */
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+  }
+
+  .contact-info {
+    width: 100%;
+  }
+  .contact-value {
+  font-size: 17px;
+  font-weight: 700;
+  color: white;
+}
+
   .contact-card {
     width: 100%;
-    margin: -28 auto 16px auto;
   }
 
-  /* Contact form */
   .contact-form {
     width: 100%;
-    margin: 0 auto;
-    padding: 24px;
+    padding: 24px;              /* 🔥 smaller padding */
   }
 }
 
@@ -248,3 +262,4 @@ input[type="number"]::-webkit-outer-spin-button {
 input[type="number"] {
   -moz-appearance: textfield;
 }
+
