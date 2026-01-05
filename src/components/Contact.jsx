@@ -102,7 +102,7 @@ const handleSubmit = async (e) => {
               </div>
 
               <div className="contact-label">/Call us</div>
-              <div className="contact-value">+91 80568 05416</div>
+              <div className="contact-value">+91 95006 54148</div>
             </div>
           </div>
 
@@ -180,6 +180,7 @@ const handleSubmit = async (e) => {
 };
 
 export default Contact;
+
 
 
 
