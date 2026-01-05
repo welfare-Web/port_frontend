@@ -123,6 +123,10 @@
   .contact-content {
     grid-template-columns: 1fr;
   }
+   .toast {
+    max-width: 320px;
+    padding: 12px 14px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -165,6 +169,29 @@
   .contact-form {
     width: 100%;
     padding: 24px;              /* 🔥 smaller padding */
+  }
+  .toast {
+    top: 16px;
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+    width: calc(100% - 32px); /* full width with margin */
+    max-width: 360px;
+    padding: 14px 16px;
+    border-radius: 12px;
+    gap: 12px;
+  }
+
+  .toast-icon {
+    font-size: 20px;
+  }
+
+  .toast-content strong {
+    font-size: 13px;
+  }
+
+  .toast-content span {
+    font-size: 12px;
   }
 }
 
@@ -262,4 +289,5 @@ input[type="number"]::-webkit-outer-spin-button {
 input[type="number"] {
   -moz-appearance: textfield;
 }
+
 
