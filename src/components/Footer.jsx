@@ -100,7 +100,7 @@ const Footer = () => {
               "We deliver scalable software, web, and digital solutions that help businesses innovate, optimize operations, and grow securely in a fast-changing tech landscape."
             </p>
             <p><b>Address:</b> Gf. 379-1, SS pushpam Complex, Bharadhi street, Opp. Gowri theatre, 5-Roads, Salem – 636 004</p>
-            <p><b>Phone:</b>+91 80568 05416</p>
+            <p><b>Phone:</b>+91 95006 54148</p>
             <p><b>Email:</b> nandhini@welfarehealthtechslm.com</p>
           </div>
 
@@ -168,3 +168,4 @@ const Footer = () => {
 };
 
 export default Footer;
+
